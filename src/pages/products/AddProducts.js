@@ -37,7 +37,7 @@ function AddProduct() {
     if (validateForm()) {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:3000/products', { // Cambia la URL al endpoint de tu API falsa
+        const response = await fetch('http://localhost:8080/products', { // Cambia la URL al endpoint de tu API falsa
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -50,7 +50,7 @@ const RegisterForm = () => {
     if (validateForm()) {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:3000/customers', { 
+        const response = await fetch('http://localhost:8080/customers', { 
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ const RegisterForm = () => {
         if (response.ok) {
           const newCustomer = await response.json();
           console.log("Se registro con exito el cliente", newCustomer);
-          navigate('/');
+          navigate('/customerValidation');
           alert("Felicidades, ya tienes una cuenta");
         } else {
           console.error("Error al crear la cuenta");
