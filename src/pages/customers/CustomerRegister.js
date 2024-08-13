@@ -57,7 +57,8 @@ const RegisterForm = () => {
           },
           body: JSON.stringify({
             ...customer,
-            id: Date.now()
+            id: Date.now(),
+            rol: 'customer'
           })
         });
 

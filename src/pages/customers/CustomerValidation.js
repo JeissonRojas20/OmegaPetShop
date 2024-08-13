@@ -25,7 +25,7 @@ function CustomerValidation() {
 
         try {
             // Simulación de una llamada a la API para obtener todos los clientes
-            const res = await axios.get('http://localhost:8080/customers');
+            const res = await axios.get('http://localhost:8080/users');
             const customers = res.data;
 
             // Buscar el cliente que coincida con el email y la contraseña ingresados
