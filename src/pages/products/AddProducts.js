@@ -23,9 +23,9 @@ function AddProduct() {
   const validateForm = () => {
     let errors = {};
     if (!product.name.trim()) errors.name = "El nombre del producto es requerido";
-    if (!product.price) errors.price = "Price is required";
-    if (!product.category.trim()) errors.category = "Category is required";
-    if (!product.image.trim()) errors.image = "Image URL is required";
+    if (!product.price) errors.price = "El precio es necesario";
+    if (!product.category.trim()) errors.category = "La categoria es requerida";
+    if (!product.image.trim()) errors.image = "El enlace de la imagen es requerido";
 
     setErrors(errors);
     return Object.keys(errors).length === 0;
@@ -37,14 +37,14 @@ function AddProduct() {
     if (validateForm()) {
       setIsLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/products', { // Cambia la URL al endpoint de tu API falsa
+        const response = await fetch('http://localhost:8080/products', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             ...product,
-            id: Date.now() // Asegura un ID único para cada producto
+            id: Date.now()
           })
         });
 

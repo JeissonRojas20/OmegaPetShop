@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-function CustomerValidation() {
+function Validation() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
@@ -12,7 +12,6 @@ function CustomerValidation() {
     const [error, setError] = useState('');
 
     const handleChange = e => {
-
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -24,7 +23,7 @@ function CustomerValidation() {
         setError('');
 
         try {
-            // Simulación de una llamada a la API para obtener todos los clientes
+            // Simulación de una llamada a la API para obtener todos los usuarios
             const res = await axios.get('http://localhost:8080/users');
             const customers = res.data;
 
@@ -34,7 +33,25 @@ function CustomerValidation() {
             if (customer) {
                 console.log('Inicio de sesión exitoso', customer);
                 alert('Inicio de sesión exitoso');
-                navigate('/products');
+
+                // Guardar la información del usuario en localStorage
+                localStorage.setItem('user', JSON.stringify(customer));
+
+                // Redirigir según el rol del usuario
+                switch (customer.rol) {
+                    case 'admin':
+                        navigate('/admin/dashboard');
+                        break;
+                    case 'company':
+                        navigate('/company/dashboard');
+                        break;
+                    case 'customer':
+                        navigate('/products');
+                        break;
+                    default:
+                        setError('Rol de usuario desconocido');
+                        navigate('/')
+                }
             } else {
                 setError('Usuario o contraseña incorrectos');
             }
@@ -44,9 +61,7 @@ function CustomerValidation() {
         }
     }
 
-
     return (
-
         <div className="min-h-screen flex items-center justify-center">
             <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
                 <div className="flex justify-center mb-8">
@@ -54,7 +69,7 @@ function CustomerValidation() {
                 </div>
                 <h1 className="text-2xl font-semibold text-center text-gray-500 mt-8 mb-6">Iniciar sesión</h1>
                 <form onSubmit={login}>
-                {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+                    {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
                     <div className="mb-6">
                         <label htmlFor="email" className="block mb-2 text-sm text-gray-600">Correo electrónico</label>
                         <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required />
@@ -71,8 +86,7 @@ function CustomerValidation() {
                 </div>
             </div>
         </div>
-
     );
 }
 
-export default CustomerValidation;
+export default Validation;
