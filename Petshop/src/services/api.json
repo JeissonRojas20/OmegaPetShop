@@ -1,0 +1,102 @@
+{
+  "products": [
+    {
+      "id": 1723639522615,
+      "name": "Pañitos Húmedos para mascotas Limpieza Esencial - Petys",
+      "price": "20000",
+      "category": "Aseo",
+      "image": "https://images.ctfassets.net/ozvjkvyngwhv/5zF8WI4V0o946EKF4dcPIm/a76a963ec9d802116a2dad0ddf10a066/x50-PAN__ITOS-LIMPIEZA-ESENCIAL.png",
+      "company": "Super Natural Barf"
+    },
+    {
+      "id": 1723639593795,
+      "name": "Pañitos Húmedos con Clorhexidina para mascotas- Petys",
+      "price": "25000",
+      "category": "Aseo",
+      "image": "https://images.ctfassets.net/ozvjkvyngwhv/hLPZTm6pocZX6SbSfTkGZ/8e27bd76634a1fcf18663dc8be2350a9/5_Productos_P__ginaWeb.webp",
+      "company": "Mascolandia"
+    },
+    {
+      "id": 1723639643760,
+      "name": "ALIMENTO PARA PERROS PERROSKI X 8.000 G.",
+      "price": "45000",
+      "category": "Comida",
+      "image": "https://aratiendas.com/wp-content/uploads/2023/01/14401-7704269225091.jpg",
+      "company": "Super Natural Barf"
+    },
+    {
+      "id": 1723639703342,
+      "name": "Galletas Dog Chow cachorro sabor Pollo y leche",
+      "price": "155000",
+      "category": "Comida",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3AkXr1qi-Hs6LdwlTx1BnsYpQ0UtCB3J_ug&s",
+      "company": "Mascolandia"
+    },
+    {
+      "id": 1723639847345,
+      "name": "Juguete Mascota Dispensador Comida Para Perros Premios",
+      "price": "220000",
+      "category": "Juguete",
+      "image": "https://http2.mlstatic.com/D_NQ_NP_690024-MCO48024980144_102021-O.webp",
+      "company": "Super Natural Barf"
+    },
+    {
+      "id": 1723639896844,
+      "name": "Juguete Perro Mascota Interactivo Dispensador Premio Comida",
+      "price": "350000",
+      "category": "Juguete",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRifxiIsSJSnOVJkPS8ZHD13JePYiofjRJqBQ&s",
+      "company": "Mascolandia"
+    },
+    {
+      "id": 1723649827234,
+      "name": "Carro",
+      "price": "60000",
+      "category": "Juguete",
+      "image": "https://www.lafavorita.com.co/wp-content/uploads/2022/02/Logo-1-300x118.png",
+      "description": "Buen producto"
+    }
+  ],
+  "users": [
+    {
+      "id": 1723604992627,
+      "name": "Carmen Palacios",
+      "email": "palera@vvianstr.com",
+      "number": "3122933688",
+      "adress": "Calle 1231 123j1ij3i12",
+      "password": "Hola2006",
+      "confirmPassword": "Hola2006",
+      "rol": "customer"
+    },
+    {
+      "id": 1723608797884,
+      "name": "Jeisson David Rojas Palacios",
+      "email": "jdrojas7000@misena.edu.co",
+      "number": "3236146958",
+      "adress": "Calle 133 # 132 B 32",
+      "password": "Admin123",
+      "confirmPassword": "Admin123",
+      "rol": "admin"
+    },
+    {
+      "id": 1723610820471,
+      "name": "Mascolandia",
+      "email": "mascolandia@gmail.com",
+      "number": "31222222222",
+      "adress": "Plaza imperial",
+      "password": "Hola2006",
+      "confirmPassword": "Hola2006",
+      "rol": "company"
+    },
+    {
+      "id": 1723640988878,
+      "name": "Super Natural Barf",
+      "email": "supernatural@gmail.com",
+      "number": "312405423",
+      "adress": "Calle 123 # 21 C 12",
+      "password": "super123",
+      "confirmPassword": "super123",
+      "rol": "company"
+    }
+  ]
+}
